@@ -4,28 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat"/>
+    <link rel="stylesheet" href="src/css/style.css">
     <title>Black Friday | Hyago Brendoll</title>
 </head>
 <body>
-    <section>
 
-    </section>
-    <section>
-        <div>
-            <div>
-                <form action="">
-                    <input type="text" placeholder="Seu nome:">
-                    <input type="email" placeholder="Melhor e-mail:">
-                    <input type="submit" value="Tenho interesse">
-                </form>
-            </div>
+    <!--START SECTION WELCOME-->
+    <section class="section-welcome bg-welcome">
+        <img src="src/img/bf_logo.svg" class="logo" alt="logo black friday">
+
+        <h1>Potencialize sua equipe de desenvolvimento.</h1>
+        <h2>Cursos <param name="" value=""> fullstack, metodologias agéis, boas práticas, markerting, estratégias e gestão</h2><br>
+
+        <p>Transforme seus <em>coders</em> em solucionadores.</p>
+
+        <!--START CARD REGISTER-->
+        <div class="card-register">
+            <form action="" method="post" id="formRegister">
+                <input type="text" id="name" placeholder="Seu nome:" required="required">
+                <input type="email" id="email" placeholder="Melhor e-mail:" required="required">
+                <input type="submit" value="QUERO PARA MINHA EQUIPE">
+            </form>
         </div>
+        <!--END CARD REGISTER-->
+        
+    </section>
+    <!--END SECTION WELCOME-->
+
+    <!--START SECTION CONTENT-->
+    <section class="section-content">
 
     </section>
+    <!--END SECTION CONTENT-->
+
+    <!--START FOOTER-->
     <footer>
-        <p>Todos os direitos reservados.</p>
+        <p>Desenvolvido por Hyago Brendoll</p>
     </footer>
+    <!--END FOOTER-->
+    
+
 </body>
-<script src="js/script.js"></script>
+<script src="src/js/script.js"></script>
 </html>

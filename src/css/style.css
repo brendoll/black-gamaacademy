@@ -1,0 +1,147 @@
+/*RESET*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*PADRÕES*/
+:root {
+    --radius-small: 5px;
+    --radius-medium: 10px;
+    --radius-large: 20px;
+    --radius-round: 50%;
+    --color-red: #F72D18;
+    --color-red-hover: #CF1500;
+    --color-white: #FFFFFF;
+    --color-placeholder: #cfcfcf;
+    --color-black: #000000;
+    --weight-light: 300;
+    --weight-normal: 400;
+    --weight-strong: 600;
+    --weight-bold: 700;
+    --weight-black: 900;
+}
+
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', Sans-serif;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: var(--weight-bold);
+    margin: 0.8rem;
+    background-color: var(--color-red);
+}
+
+p {
+    font-size: 1rem; 
+    font-weight: var(--weight-normal);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%
+}
+
+footer {
+    height: 12vh;
+    padding: 2vh;
+    text-align: center;
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+form {
+    display: grid;
+}
+
+input {
+    appearance: none;
+    text-decoration: none;
+    font-family: 'Montserrat', Sans-serif;
+    font-weight: var(--weight-strong);
+    text-align: left; 
+    width: 30rem;
+    height: 3rem;
+    padding: 0.2rem 1rem;
+    margin-bottom: 1rem;
+    color: var(--color-white);
+    border: 2px solid var(--color-red);
+    border-radius: var(--radius-small);
+    background-color: transparent;
+}
+
+input:focus {
+    transition: 0.5s;
+    border: 2px solid var(--color-white);
+    border-radius: var(--radius-small);
+    outline: none;
+}
+
+input[type=submit] {
+    box-sizing: content-box;
+    background-color: var(--color-red);
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: var(--weight-black);
+}
+
+input[type=submit]:hover {
+    background-color: var(--color-red-hover);
+    border-color: var(--color-red-hover);
+}
+
+section {
+    height: 100vh;
+    width: 100%;
+}
+
+.section-welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color-white);
+}
+
+.section-welcomep {
+    max-width: 35rem;
+}
+
+
+.bg-welcome {
+    background-image: url("../img/bg.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.section-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    height: 30vh;
+}
+
+.card-register {
+    padding: 1rem;
+    border-radius: 1vh;
+}
+
+::placeholder {
+    font-weight: var(--weight-strong);
+    color: var(--color-placeholder);
+}
