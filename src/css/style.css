@@ -201,6 +201,7 @@ item img {
 
     box-sizing: border-box;
     padding: 1rem;
+    max-width: 1200px;
 }
 
 ::placeholder {
