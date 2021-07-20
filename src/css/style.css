@@ -13,6 +13,7 @@
 
     --color-one: #fffffe;
     --color-two: #3da9fc;
+    --color-two-hover: #2098f3;
     --color-three: #094067;
     --color-three-hover: #053a5f;
     --color-four: #5f6c7b;
@@ -61,7 +62,7 @@ input {
     height: 4rem;
     padding: 0.2rem 1rem;
     margin-bottom: 1rem;
-    border: 2px solid var(--color-one);
+    border: 2px solid var(--color-two);
     border-radius: var(--radius-small);
 
     text-decoration: none;
@@ -69,21 +70,21 @@ input {
     font-family: 'Montserrat', Sans-serif;
     font-weight: var(--weight-strong);
 
-    color: var(--color-one);
+    color: var(--color-two);
     background-color: transparent;
 }
 
 input:focus {
     transition: 0.5s;
     outline: none;
-    border: 2px solid var(--color-one);
+    border: 2px solid var(--color-two-hover);
     border-radius: var(--radius-small); 
 }
 
 input[type=submit] {
     color: var(--color-one);
-    border-color: var(--color-three);
-    background-color: var(--color-three);
+    border-color: var(--color-two);
+    background-color: var(--color-two);
     cursor: pointer;
     text-align: center;
     font-size: 1.2rem;
@@ -91,8 +92,8 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-    background-color: var(--color-three-hover);
-    border-color: var(--color-three-hover);
+    background-color: var(--color-two-hover);
+    border-color: var(--color-two-hover);
 }
 
 section {
@@ -117,8 +118,15 @@ item img {
     width: 70%;
 }
 
+h1 {
+    color: var(--color-three);
+}
+
+p {
+    color: var(--color-four);
+}
+
 .title {
-    color: var(--color-one);
     font-family: 'Ubuntu', Sans-serif;
     font-size: 6rem;
     font-weight: var(--weight-bold);
@@ -128,22 +136,13 @@ item img {
 
 .subtitle {
     font-family: 'Ubuntu', Sans-serif;
-    color: var(--color-six);
     font-size: 1.5rem;
     font-weight: var(--weight-normal);
     margin-bottom: 2rem;
 }
 
-.headline {
-    color: var(--color-three);
-}
-
-.paragraph {
-    color: var(--color-four);
-}
-
 .section-welcome {
-    background-color: var(--color-two);
+    /*background-color: var(--color-two);*/
     /*background-image: linear-gradient(to bottom, #90b4ce, #fffffe);*/
     /*background-image: url('../img/bg.jpg');
     background-repeat: no-repeat;
@@ -206,5 +205,5 @@ item img {
 
 ::placeholder {
     font-weight: var(--weight-strong);
-    color: var(--color-six);
+    color: var(--color-five);
 }
