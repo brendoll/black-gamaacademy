@@ -10,16 +10,23 @@
     --radius-medium: 10px;
     --radius-large: 20px;
     --radius-round: 50%;
-    --color-red: #F72D18;
-    --color-red-hover: #CF1500;
-    --color-white: #FFFFFF;
-    --color-placeholder: #cfcfcf;
-    --color-black: #000000;
+
+    --color-one: #fffffe;
+    --color-two: #3da9fc;
+    --color-three: #094067;
+    --color-three-hover: #053a5f;
+    --color-four: #5f6c7b;
+    --color-five: #90b4ce;
+    --color-six: #f0f0f0;
+    --color-seven: #cacaca;
+
     --weight-light: 300;
     --weight-normal: 400;
     --weight-strong: 600;
     --weight-bold: 700;
     --weight-black: 900;
+
+    --width-max-welcome: 35rem;
 }
 
 html {
@@ -32,64 +39,68 @@ body {
 }
 
 h1 {
-    font-size: 1.5rem;
+    color: var(--color-one);
+    font-family: 'Ubuntu', Sans-serif;
+    font-size: 6rem;
     font-weight: var(--weight-bold);
-    margin: 0.8rem;
-    background-color: var(--color-red);
+    line-height: 0.9;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-family: 'Ubuntu', Sans-serif;
+    color: var(--color-six);
+    font-size: 1.5rem;
+    font-weight: var(--weight-normal);
+    margin-bottom: 2rem;
 }
 
 p {
     font-size: 1rem; 
     font-weight: var(--weight-normal);
+    margin-bottom: 1rem;
 }
 
 a {
     text-decoration: none;
 }
 
-img {
-    display: block;
-    max-width: 100%
-}
-
 footer {
     height: 12vh;
     padding: 2vh;
     text-align: center;
-    background-color: var(--color-black);
-    color: var(--color-white);
-}
-
-form {
-    display: grid;
+    color: var(--color-one);   
+    background-color: var(--color-two);
 }
 
 input {
-    appearance: none;
-    text-decoration: none;
-    font-family: 'Montserrat', Sans-serif;
-    font-weight: var(--weight-strong);
-    text-align: left; 
-    width: 30rem;
-    height: 3rem;
+    box-sizing: border-box;
+    height: 4rem;
     padding: 0.2rem 1rem;
     margin-bottom: 1rem;
-    color: var(--color-white);
-    border: 2px solid var(--color-red);
+    border: 2px solid var(--color-one);
     border-radius: var(--radius-small);
+
+    text-decoration: none;
+    text-align: left; 
+    font-family: 'Montserrat', Sans-serif;
+    font-weight: var(--weight-strong);
+
+    color: var(--color-one);
     background-color: transparent;
 }
 
 input:focus {
     transition: 0.5s;
-    border: 2px solid var(--color-white);
-    border-radius: var(--radius-small);
     outline: none;
+    border: 2px solid var(--color-one);
+    border-radius: var(--radius-small); 
 }
 
 input[type=submit] {
-    box-sizing: content-box;
-    background-color: var(--color-red);
+    color: var(--color-one);
+    border-color: var(--color-three);
+    background-color: var(--color-three);
     cursor: pointer;
     text-align: center;
     font-size: 1.2rem;
@@ -97,8 +108,8 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-    background-color: var(--color-red-hover);
-    border-color: var(--color-red-hover);
+    background-color: var(--color-three-hover);
+    border-color: var(--color-three-hover);
 }
 
 section {
@@ -106,24 +117,50 @@ section {
     width: 100%;
 }
 
-.section-welcome {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: var(--color-white);
+.bg-black {
+    background-color: var(--color-one); 
 }
 
-.section-welcomep {
-    max-width: 35rem;
-}
-
-
-.bg-welcome {
-    background-image: url("../img/bg.jpg");
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
+.container-welcome {
+    background-color: var(--color-two);
+    /*background-image: linear-gradient(to bottom, #90b4ce, #fffffe);*/
+    /*background-image: url('../img/bg.jpg');
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right bottom;*/
+
+    display: grid;
+    column-gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "welcome-card welcome-illustration"
+}
+
+.welcome-card {
+    width: 95%;
+    max-width: var(--width-max-welcome);
+    text-align: left;
+
+    grid-area: welcome-card;
+    justify-self: end;
+    align-self: end;
+}
+
+.welcome-form input {
+    width: 100%;
+    float: right;
+}
+
+.welcome-illustration {
+    grid-area: welcome-illustration;
+    justify-self: start;
+    align-self: end;
+}
+
+.welcome-illustration img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
 }
 
 .section-content {
@@ -132,16 +169,7 @@ section {
     align-items: center;
 }
 
-.logo {
-    height: 30vh;
-}
-
-.card-register {
-    padding: 1rem;
-    border-radius: 1vh;
-}
-
 ::placeholder {
     font-weight: var(--weight-strong);
-    color: var(--color-placeholder);
+    color: var(--color-six);
 }
