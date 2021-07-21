@@ -51,11 +51,7 @@ nav {
     position: relative;
     height: 10vh;
     display: flex;
-}
-
-nav img {
-    padding: 1%;
-
+    justify-content: center;
 }
 
 footer {
@@ -80,7 +76,7 @@ input {
     font-size: 1rem;
 
     color: var(--color-three);
-    background-color: transparent;
+    background-color: var(--color-one);
 }
 
 input:focus {
@@ -138,6 +134,33 @@ h2 {
 
 .open {
     height: 100vh;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    width: calc(100% - 10rem);
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu .logo {
+    max-height: 50%;
+}
+
+.menu-links {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.menu-links a {
+    font-size: 0.9rem;
+    color: var(--color-one);
+    padding: 0 2rem;
 }
 
 .title {
