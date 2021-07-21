@@ -47,6 +47,17 @@ a {
     text-decoration: none;
 }
 
+nav {
+    position: relative;
+    height: 10vh;
+    display: flex;
+}
+
+nav img {
+    padding: 1%;
+
+}
+
 footer {
     height: 12vh;
     padding: 2vh;
@@ -125,9 +136,13 @@ h2 {
     background-color: var(--color-two);
 }
 
+.open {
+    height: 100vh;
+}
+
 .title {
     font-family: 'Ubuntu', Sans-serif;
-    font-size: 6rem;
+    font-size: 5rem;
     font-weight: var(--weight-bold);
     line-height: 0.9;
     margin-bottom: 2vw;
@@ -135,7 +150,7 @@ h2 {
 
 .subtitle {
     font-family: 'Ubuntu', Sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: var(--weight-normal);
 }
 
@@ -146,41 +161,36 @@ h2 {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: right bottom;*/
-
-    height: 100vh;
-    margin-bottom: 2rem;
+    box-sizing: border-box;
+    padding: 2rem;
     display: grid;
     column-gap: 2vh;
+    align-items: end;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
-    "welcome-card welcome-illustration"
+    "welcome-card welcome-illustration";
 }
 
 .welcome-card {
     max-width: 560px;
-    max-height: 90%;
     text-align: left;
 
     grid-area: welcome-card;
     justify-self: end;
-    align-self: end;
 }
 
 .welcome-form input {
     height: 70px;
     width: 100%;
-    float: right;
 }
 
 .welcome-illustration {
     grid-area: welcome-illustration;
     justify-self: start;
-    align-self: end;
 }
 
 .welcome-illustration img {
-    max-width: 90%;
-    max-height: 90%;
+    max-height: 500px;
     object-fit: contain;
 }
 
