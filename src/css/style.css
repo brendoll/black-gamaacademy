@@ -133,7 +133,9 @@ h2 {
 }
 
 .open {
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .menu {
@@ -178,14 +180,17 @@ h2 {
 }
 
 .section-welcome {
-    /*background-color: var(--color-two);*/
-    /*background-image: linear-gradient(to bottom, #90b4ce, #fffffe);*/
-    /*background-image: url('../img/bg.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: right bottom;*/
+    align-self: center;
+    max-width: 1400px;
     box-sizing: border-box;
     padding: 2rem;
+
+    background-image: url('../img/bg-welcome.png');
+    background-size: auto; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center bottom;
+
     display: grid;
     column-gap: 2vh;
     align-items: end;
