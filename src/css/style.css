@@ -48,17 +48,20 @@ a {
 }
 
 nav {
-    position: relative;
     height: 10vh;
     display: flex;
     justify-content: center;
+    flex-direction: row;
 }
 
 footer {
-    height: 12vh;
-    padding: 2vh;
-    text-align: center;
-    color: var(--color-one);   
+    height: 10vh;
+
+    display: flex; 
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap; 
 }
 
 input {
@@ -104,12 +107,8 @@ section {
     width: 100%;
 }
 
-h1, h2, h3 {
+h1, h2 {
     color: var(--color-three);
-}
-
-p {
-    color: var(--color-four);
 }
 
 label {
@@ -132,6 +131,14 @@ h2 {
     background-color: var(--color-two);
 }
 
+.color-one {
+    color: var(--color-one);
+}
+
+.color-four {
+    color: var(--color-four);
+}
+
 .open {
     display: flex;
     flex-direction: column;
@@ -149,18 +156,26 @@ h2 {
     justify-content: space-between;
 }
 
-.menu .logo {
+.logo {
     max-height: 50%;
 }
 
-.menu-links {
+.partner {
+    height: 2rem;
+    padding-right: 2rem;
+}
+
+.social {
+    padding-left: 1rem;
+}
+
+.menu-links, .footer-partner, .footer-dev {
     display: flex;
     flex-direction: row;
     text-align: center;
 }
 
 .menu-links a {
-    font-size: 0.9rem;
     color: var(--color-one);
     padding: 0 2rem;
 }
@@ -175,7 +190,7 @@ h2 {
 
 .subtitle {
     font-family: 'Ubuntu', Sans-serif;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: var(--weight-normal);
 }
 
