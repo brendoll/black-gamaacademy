@@ -219,20 +219,15 @@ h3 {
     background-attachment: fixed;
     background-position: center bottom;
 
-    display: grid;
-    column-gap: 2vh;
-    align-items: end;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-    "welcome-card welcome-illustration";
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
 }
 
 .welcome-card {
     max-width: 560px;
     text-align: left;
-
-    grid-area: welcome-card;
-    justify-self: end;
 }
 
 .welcome-form input {
@@ -240,12 +235,7 @@ h3 {
     width: 100%;
 }
 
-.welcome-illustration {
-    grid-area: welcome-illustration;
-    justify-self: start;
-}
-
-.welcome-illustration img {
+.section-welcome img {
     max-height: 500px;
     object-fit: contain;
 }
@@ -338,3 +328,35 @@ h3 {
 .diff-content label {
     margin-bottom: 1rem;
 }
+
+@media only screen and (max-width: 799px) {
+    .section-welcome {
+        max-width: 100%;
+        background-position: right bottom;
+
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .welcome-card {
+        max-width: 100%;
+        text-align: left;
+    }
+    
+    .welcome-form input {
+        height: 5rem;
+        width: 100%;
+    }
+    
+    .section-welcome img {
+        max-width: 100%;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+    
+    .subtitle {
+        font-size: 1.3rem;
+    }
+} 
