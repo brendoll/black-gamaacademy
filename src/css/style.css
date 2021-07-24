@@ -433,6 +433,10 @@ h3 {
     .menu {
         width: auto;
     }
+
+    .menu-links {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 400px) {
