@@ -359,4 +359,20 @@ h3 {
     .subtitle {
         font-size: 1.3rem;
     }
-} 
+
+    .label {
+        font-size: 1.2rem;
+    }
+
+    .container-skills {
+        flex-direction: row;
+        align-items: stretch;
+        padding: 1rem;
+        max-width: 100%;
+    }
+
+    .container-skills item {
+        flex: 40%;
+        margin: 2%;
+    }
+}
